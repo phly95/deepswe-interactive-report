@@ -1,44 +1,31 @@
 # Unofficial DeepSWE Benchmark Interactive Report
 
-This repository hosts a fully interactive, responsive, and self-contained community-driven dashboard for exploring the DeepSWE benchmark dataset.
+An interactive, responsive, and self-contained dashboard for exploring the DeepSWE benchmark dataset — a comprehensive dataset measuring frontier AI coding agents on real-world software engineering tasks.
 
-🌐 **Live Demo:** [https://phly95.github.io/deepswe-interactive-report/](https://phly95.github.io/deepswe-interactive-report/)
-
----
-
-## ⚡ Lightweight Design & Zero Footprint
-Although the raw DeepSWE benchmark trials and datasets consist of **~12 GB of logs and SQLite files**, this frontend dashboard is designed to be **completely self-contained**.
-
-* **Compiled Size:** Less than **300 KB** total!
-* **No Database Required:** All computed leaderboard statistics, rankings, language breadth parameters, heatmaps, and tasks are pre-compiled and embedded directly as lightweight JS assets in [index.html](index.html).
-* **No Backend Needed:** Fully executable on standard client-side browser environments. Perfect for high-speed delivery over CDNs and GitHub Pages.
+🌐 **Live Dashboard:** [https://phly95.github.io/deepswe-interactive-report/](https://phly95.github.io/deepswe-interactive-report/)
 
 ---
 
-## 🚀 How to Publish to GitHub Pages (Step-by-Step)
+## 📊 About the Dashboard
+This dashboard compiles and visualizes **13,424 trial runs** across **19 base models** (27 distinct agent configurations) and **113 tasks** from the DeepSWE benchmark. It provides a highly detailed, interactive lens into AI capability, cost efficiency, and speed.
 
-Publishing this repository is completely free, takes less than 2 minutes, and doesn't require any building/compiling:
+### Key Sections & Features:
+* **Interactive Model Leaderboard**: Rank and filter agents dynamically across multiple dimensions (overall pass rates, speed, cost per successful fix, value scores).
+* **Dual Token Efficiency Tracks**: 
+  * **Input Token Efficiency**: Analysis of context window usage and prompt compression.
+  * **Output Token Efficiency**: Analysis of reasoning verbosity and tool-call efficiency (fewer output tokens represent direct reasoning and lower costs).
+* **Language Breadth & Heatmaps**: Compare success rates color-coded across Python, TypeScript, Go, Rust, and JavaScript tasks.
+* **Divisive Task Index**: Identify the top 10 most "divisive" tasks in the benchmark — tasks with the highest performance spread between models, indicating where frontier capabilities diverge.
+* **Detailed Model Profiles**: Deep-dives into individual configurations, highlighting specific strengths, weaknesses, best/worst tasks, and real-world execution implications.
 
-1. **Create a new GitHub Repository:**
-   * Go to [github.new](https://github.new) and create a repository named **`deepswe-interactive-report`**.
-2. **Push the contents of this folder (`deploy/`) to your repo:**
-   ```bash
-   git init
-   git add index.html README.md
-   git commit -m "Deploy unofficial interactive DeepSWE report"
-   git branch -M main
-   git remote add origin https://github.com/phly95/deepswe-interactive-report.git
-   git push -u origin main
-   ```
-3. **Enable GitHub Pages:**
-   * Open your repository on GitHub.
-   * Go to **Settings** $\rightarrow$ **Pages** (under "Code and automation" in the left sidebar).
-   * Under **Build and deployment**, select **Deploy from a branch** as the source.
-   * Under **Branch**, select **`main`** and **`/ (root)`**, then click **Save**.
+---
 
-Your interactive report will be live at `https://phly95.github.io/deepswe-interactive-report/` in under a minute!
+## 🔍 Data Disclosures
+To ensure absolute mathematical honesty and transparent analysis, the following custom adjustments have been compiled into this dataset:
+* **Independent Benchmarking**: Mimo V2.5 was benchmarked independently, and its trials are integrated into the full leaderboard.
+* **Pricing Tweaks**: Mimo V2.5 Pro pricing has been adjusted from the official DeepSWE benchmark values to reflect its recent permanent price drop, showing its current cost-efficiency accurately.
 
 ---
 
 ## ⚖️ Legal & Disclaimer
-This is an **unofficial, independent community-driven report** created for interactive exploration of the DeepSWE trial dataset. This project is not affiliated with, sponsored by, or endorsed by Datacurve or the official DeepSWE benchmark team. Mimo V2.5 was benchmarked independently, and Mimo V2.5 Pro pricing has been adjusted from the official benchmark values to reflect its recent permanent price drop.
+This is an **unofficial, independent community-driven report** created for interactive exploration of the DeepSWE trial dataset. This project is not officially affiliated with, sponsored by, or endorsed by Datacurve or the official DeepSWE benchmark team.
